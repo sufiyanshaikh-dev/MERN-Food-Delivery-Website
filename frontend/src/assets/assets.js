@@ -61,7 +61,7 @@ import logout_icon from './logout_icon.png'
 import parcel_icon from './parcel_icon.png'
 import real_logo from "./real_logo.png"
 import menu_icon from "./menu_icon.png"
-import add_icon_white_removeBg from "./add_icon_white_removeBg.png"
+import add_icon_white_removeBg from "./add_icon_white_removebg.png"
 import dropdown_icon from "./dropdown_icon.png"
 import dinner from "./dinner.png"
 import like from "./like.png"
@@ -72,7 +72,7 @@ import mail from "./mail.png"
 import tik_image from "./tik_image.png"
 
 export const assets = {
-    add_icon_white_removeBg,
+    add_icon_white_removebg,
     contact_img,
     tik_image,
     tik_image,
