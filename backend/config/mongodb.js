@@ -1,36 +1,28 @@
-// import mongoose from "mongoose";
-
-// const connectDB = async () => {
-
-//     mongoose.connection.on("connected", () => {
-//         console.log("DB connected")
-//     })
-
-//     mongoose.connect(`${process.env.MONGODB_URI}/foodApp`)
-//         .then(() => console.log("✅ MongoDB connected successfully"))
-//         .catch((err) => console.error("❌ MongoDB connection failed:", err));
-        
-// }
-
-// export default connectDB
 import mongoose from "mongoose";
 
+let cached = global.mongoose;
+
+if (!cached) {
+  cached = global.mongoose = { conn: null, promise: null };
+}
+
 const connectDB = async () => {
-  try {
-    await mongoose.connect(process.env.MONGODB_URI, {
-      dbName: "foodApp",  // optional if not in URI
-      useNewUrlParser: true,
-      useUnifiedTopology: true,
-    });
-    console.log("✅ MongoDB connected successfully");
-  } catch (err) {
-    console.error("❌ MongoDB connection failed:", err.message);
-    process.exit(1);
+  if (cached.conn) {
+    return cached.conn;
   }
 
-  mongoose.connection.on("connected", () => {
-    console.log("DB event: connected");
-  });
+  if (!cached.promise) {
+    cached.promise = mongoose.connect(process.env.MONGODB_URI, {
+      dbName: "foodApp",
+      useNewUrlParser: true,
+      useUnifiedTopology: true,
+    }).then((mongoose) => {
+      return mongoose;
+    });
+  }
+
+  cached.conn = await cached.promise;
+  return cached.conn;
 };
 
 export default connectDB;
