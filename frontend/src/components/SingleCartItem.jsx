@@ -43,7 +43,7 @@ const SingleCartItem = ({ item }) => {
           </span>
 
           <button onClick={handleIncrement} className="mr-[-7px]">
-            <img src={assets.add_icon_white_removeBg} alt="plus" />
+            <img src={assets.add_icon_white_removebg} alt="plus" />
           </button>
         </div>
       </div>
