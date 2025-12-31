@@ -18,7 +18,7 @@ const Navbar = () => {
         <nav className="flex items-center justify-between py-4 select-none px-4 sm:px-[5vw] md:px-[7vw] lg:px-[9vw]">
 
             {/* LEFT — LOGO */}
-            <Link to="/verify">
+            <Link to="/">
                 <img src={assets.real_logo} alt="logo" className="w-44 md:w-36 h-[36px]" />
             </Link>
 
