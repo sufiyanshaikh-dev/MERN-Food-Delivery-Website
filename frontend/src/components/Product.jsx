@@ -3,7 +3,7 @@ import { FoodContext } from '../context/FoodContext.jsx'
 import ProductCard from './ProductCard.jsx'
 
 
-const Products = () => {
+const Product = () => {
     const { products, category } = useContext(FoodContext)
 
     const filteredProducts =
@@ -32,4 +32,4 @@ const Products = () => {
     )
 }
 
-export default Products
+export default Product

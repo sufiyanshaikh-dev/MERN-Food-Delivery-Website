@@ -147,6 +147,10 @@ const FoodContextProvider = ({ children }) => {
     }, []);
 
     useEffect(() => {
+        console.log("Backend URL:", backendUrl);
+    }, [backendUrl]);
+
+    useEffect(() => {
         if (backendUrl) {
             fetchProductData();
             fetchMenuData()
