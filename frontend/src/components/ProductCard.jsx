@@ -49,7 +49,7 @@ const ProductCard = ({ product }) => {
 
             {/* Plus */}
             <button onClick={handleIncrement} className="absolute right-0 top-1/2 -translate-y-1/2 border-0 outline-none">
-              <img src={assets.add_icon_white_removeBg} alt="plus" />
+              <img src={assets.add_icon_white_removebg} alt="plus" />
             </button>
 
           </div>
