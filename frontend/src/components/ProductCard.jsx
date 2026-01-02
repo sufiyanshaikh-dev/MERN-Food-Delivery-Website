@@ -1,6 +1,7 @@
 import React, { useState, useContext } from 'react'
 import { assets } from '../assets/assets.js'
 import { FoodContext } from '../context/FoodContext.jsx'
+import { toast } from 'react-toastify'
 
 const ProductCard = ({ product }) => {
   const [count, setCount] = useState(0)
@@ -13,6 +14,7 @@ const ProductCard = ({ product }) => {
     const newCount = count + 1
     setCount(newCount)
     addToCart(product._id)
+    toast.success("Product added")
   }
 
   const handleDecrement = () => {
@@ -20,6 +22,7 @@ const ProductCard = ({ product }) => {
     const newCount = count - 1
     setCount(newCount)
     updateCart(product._id, newCount)
+    toast.success("Product removed")
   }
 
   return (
