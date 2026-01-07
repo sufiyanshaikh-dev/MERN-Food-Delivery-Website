@@ -51,7 +51,7 @@ const MenuPage = () => {
             <p onClick={() => setIsSidebarOpen(prev => !prev)} className="w-full py-4 text-lg font-semibold bg-[#FF6D1F] border-[#e05b13] border-2 text-white rounded-xl hover:bg-[#c9500f] transition pl-8">Filter</p>
           </span>
 
-          <div className="bg-white px-4 py-2 mx-[-20px]">
+          <div className="bg-white px-4 py-2 mx-[-20px] mb-2">
             <div className="flex justify-between">
               <p className="text-md mt-2">Price Range</p>
               <p className="text-md mt-2">${value}</p>
@@ -73,7 +73,7 @@ const MenuPage = () => {
           </div>
           <hr />
 
-          <div onClick={() => reset()} className='flex gap-4 justify-center cursor-pointer mt-8'>
+          <div onClick={() => reset()} className='flex gap-4 justify-center cursor-pointer mt-2'>
             <p>Reset Filter</p>
             <span className='px-6 bg-[#FF6D1F] text-sm hover:text-[16px] rounded-xl text-white'>Reset</span>
           </div>
