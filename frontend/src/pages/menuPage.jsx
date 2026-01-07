@@ -44,7 +44,7 @@ const MenuPage = () => {
       <div className="hidden md:flex gap-6 mb-10 px-4 sm:px-[5vw] md:px-[7vw] lg:px-[9vw]">
         {/* Sidebar */}
         <div className="w-64 bg-white border-r mt-5 shadow-md p-5 flex-col gap-6 rounded-xl h-fit">
-            <p className="mb-[10px]">CATEGORY</p>
+            <p className="mb-[10px] font-semibold text-xl">CATEGORY</p>
           <hr />
 
           <span>
@@ -73,7 +73,7 @@ const MenuPage = () => {
           </div>
           <hr />
 
-          <div onClick={() => reset()} className='flex gap-4 justify-center cursor-pointer mt-16'>
+          <div onClick={() => reset()} className='flex gap-4 justify-center cursor-pointer mt-8'>
             <p>Reset Filter</p>
             <span className='px-6 bg-[#FF6D1F] text-sm hover:text-[16px] rounded-xl text-white'>Reset</span>
           </div>
