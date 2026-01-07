@@ -44,13 +44,10 @@ const MenuPage = () => {
       <div className="hidden md:flex gap-6 mb-10 px-4 sm:px-[5vw] md:px-[7vw] lg:px-[9vw]">
         {/* Sidebar */}
         <div className="w-64 bg-white border-r mt-5 shadow-md p-5 flex-col gap-6 rounded-xl h-fit">
-          <div className="flex justify-between mb-[-12px]">
-            <p>CATEGORY</p>
-            <img src={assets.cross_icon} className="w-3 h-auto cursor-pointer" />
-          </div>
+            <p className="mb-[10px]">CATEGORY</p>
           <hr />
 
-          <span className="border-4 border-white rounded-2xl shadow-[0_10px_30px_rgba(255,109,31,0.85)]">
+          <span>
             <p onClick={() => setIsSidebarOpen(prev => !prev)} className="w-full py-4 text-lg font-semibold bg-[#FF6D1F] border-[#e05b13] border-2 text-white rounded-xl hover:bg-[#c9500f] transition pl-8">Filter</p>
           </span>
 
@@ -76,7 +73,7 @@ const MenuPage = () => {
           </div>
           <hr />
 
-          <div onClick={() => reset()} className='flex gap-4 justify-center cursor-pointer'>
+          <div onClick={() => reset()} className='flex gap-4 justify-center cursor-pointer mt-4'>
             <p>Reset Filter</p>
             <span className='px-6 bg-[#FF6D1F] text-sm hover:text-[16px] rounded-xl text-white'>Reset</span>
           </div>
