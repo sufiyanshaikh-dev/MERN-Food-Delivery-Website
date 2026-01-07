@@ -73,7 +73,7 @@ const MenuPage = () => {
           </div>
           <hr />
 
-          <div onClick={() => reset()} className='flex gap-4 justify-center cursor-pointer mt-4'>
+          <div onClick={() => reset()} className='flex gap-4 justify-center cursor-pointer mt-16'>
             <p>Reset Filter</p>
             <span className='px-6 bg-[#FF6D1F] text-sm hover:text-[16px] rounded-xl text-white'>Reset</span>
           </div>
